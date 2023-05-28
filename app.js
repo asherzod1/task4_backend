@@ -13,25 +13,20 @@ const extractUser = (req, res, next) => {
         res.status(401).json({ error: 'Unauthorized' });
     }
     if (token) {
-        // Remove the "Bearer " prefix from the token
         const accessToken = token.split(' ')[1];
 
         try {
-            // Verify and decode the token
             const decoded = jwt.verify(accessToken, 'your-secret-key');
             console.log("DECODED",decoded)
             req.user = decoded;
         } catch (err) {
-            // Handle token verification errors
             return res.status(401).json({ error: 'Unauthorized' });
-            // console.error('Token verification failed:', err);
         }
     }
     next();
 };
 
 
-// Create an Express application
 const app = express();
 
 // Middleware
@@ -42,18 +37,16 @@ const corsOptions = {
     optionsSuccessStatus: 200,
 };
 
-app.use(cors(corsOptions)); // Enable CORS for localhost:3000
+app.use(cors(corsOptions));
 
 app.use('/auth', authRoutes);
 
 app.use(extractUser);
 
-// Define a route
+
 
 app.use('', routes)
-// Authentication routes
 
-// Start the server
 app.listen(8000, () => {
     console.log('Server is running on port 8000');
 });
