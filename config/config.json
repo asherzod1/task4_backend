@@ -7,10 +7,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "your_prod_username",
-    "password": "your_prod_password",
-    "database": "your_prod_database",
-    "host": "your_prod_host",
+    "username": "root",
+    "password": "7eXb3Z0b2wl7W4Wv7NXA",
+    "database": "railway",
+    "host": "containers-us-west-127.railway.app",
+    "port": "5451",
     "dialect": "mysql"
   }
 }
