@@ -1,0 +1,16 @@
+{
+  "development": {
+    "username": "root",
+    "password": "1234",
+    "database": "task4",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "your_prod_username",
+    "password": "your_prod_password",
+    "database": "your_prod_database",
+    "host": "your_prod_host",
+    "dialect": "mysql"
+  }
+}
