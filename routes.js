@@ -6,9 +6,6 @@ router = express.Router();
 
 router.get("/userme", async (req, res) => {
     try {
-        // console.log(req)
-
-        console.log(req.user.userId)
         const user = await User.findByPk(req.user.userId, {
             attributes: { exclude: ['password'] },
         });
