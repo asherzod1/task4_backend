@@ -17,7 +17,7 @@
     "node": "16.x"
   },
   "scripts": {
-    "prestart": "npx sequelize-cli db:migrate",
+    "prestart": "npx sequelize-cli db:migrate --env production",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
