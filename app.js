@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 const corsOptions = {
     origin: [
         'http://localhost:3000',
-        'https://task4-front-end-m313-exwvcxcgg-asherzod1.vercel.app'
+        'https://task4-front-end-m313-lss8jtvcz-asherzod1.vercel.app'
     ],
     optionsSuccessStatus: 200,
 };
