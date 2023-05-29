@@ -33,7 +33,10 @@ const app = express();
 app.use(bodyParser.json());
 // Configure CORS
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: [
+        'http://localhost:3000',
+        'https://task4-front-end-m313-exwvcxcgg-asherzod1.vercel.app'
+    ],
     optionsSuccessStatus: 200,
 };
 
