@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 const corsOptions = {
     origin: [
         'http://localhost:3000',
-        'https://task4-front-end-new.vercel.app'
+        'https://task4-front-end.vercel.app'
     ],
     optionsSuccessStatus: 200,
 };
@@ -45,8 +45,6 @@ app.use(cors(corsOptions));
 app.use('/auth', authRoutes);
 
 app.use(extractUser);
-
-
 
 app.use('', routes)
 
